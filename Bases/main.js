@@ -1,6 +1,92 @@
-System.register("funciones/args-default", [], function (exports_1, context_1) {
+System.register("ES6/desestructuring", [], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [],
+        execute: function () {
+            (() => {
+                const avenger = {
+                    nombre: "Steve",
+                    clave: "Capitán América",
+                    poder: "Droga",
+                    activos: true
+                };
+                const { nombre, clave, poder, activos } = avenger;
+                console.log(nombre);
+                console.log(clave);
+                console.log(poder);
+                console.log(activos);
+                const extraer = ({ nombre, clave, poder }) => {
+                    console.log(nombre);
+                    console.log(clave);
+                    console.log(poder);
+                };
+                extraer(avenger);
+                // Desestructuración en arreglos
+                const avengers = ["Thor", "Ironman", "Spiderman"];
+                const [thor, ironman, spiderman] = avengers;
+                console.log(thor);
+                console.log(ironman);
+                console.log(spiderman);
+                const extraerArr = ([thor, ironman, spiderman]) => {
+                    console.log(thor);
+                    console.log(ironman);
+                    console.log(spiderman);
+                };
+                extraerArr(avengers);
+            });
+        }
+    };
+});
+System.register("ES6/for-of", [], function (exports_2, context_2) {
+    "use strict";
+    var __moduleName = context_2 && context_2.id;
+    return {
+        setters: [],
+        execute: function () {
+            (() => {
+                const iroman = {
+                    nombre: "Tony Stark",
+                    clave: "Ironman"
+                };
+                const capitanAmerica = {
+                    nombre: "Steve Rogers",
+                    clave: "Capitán América"
+                };
+                const thor = {
+                    nombre: "Thor Odinson",
+                    clave: "Thor"
+                };
+                const avengers = [iroman, capitanAmerica, thor];
+                for (const avenger of avengers) {
+                    console.log(avenger);
+                    console.log(avenger.nombre);
+                    console.log(avenger.clave);
+                }
+            });
+        }
+    };
+});
+System.register("ES6/let-var", [], function (exports_3, context_3) {
+    "use strict";
+    var __moduleName = context_3 && context_3.id;
+    return {
+        setters: [],
+        execute: function () {
+            (() => {
+                const nombre = "Strider";
+                if (true) {
+                    let nombre = "Tony";
+                    console.log(nombre);
+                }
+                console.log(nombre);
+            });
+        }
+    };
+});
+System.register("funciones/args-default", [], function (exports_4, context_4) {
+    "use strict";
+    var __moduleName = context_4 && context_4.id;
     return {
         setters: [],
         execute: function () {
@@ -15,9 +101,9 @@ System.register("funciones/args-default", [], function (exports_1, context_1) {
         }
     };
 });
-System.register("funciones/args-optionals", [], function (exports_2, context_2) {
+System.register("funciones/args-optionals", [], function (exports_5, context_5) {
     "use strict";
-    var __moduleName = context_2 && context_2.id;
+    var __moduleName = context_5 && context_5.id;
     return {
         setters: [],
         execute: function () {
@@ -32,9 +118,9 @@ System.register("funciones/args-optionals", [], function (exports_2, context_2) 
         }
     };
 });
-System.register("funciones/args-required", [], function (exports_3, context_3) {
+System.register("funciones/args-required", [], function (exports_6, context_6) {
     "use strict";
-    var __moduleName = context_3 && context_3.id;
+    var __moduleName = context_6 && context_6.id;
     return {
         setters: [],
         execute: function () {
@@ -49,9 +135,9 @@ System.register("funciones/args-required", [], function (exports_3, context_3) {
         }
     };
 });
-System.register("funciones/args-rest", [], function (exports_4, context_4) {
+System.register("funciones/args-rest", [], function (exports_7, context_7) {
     "use strict";
-    var __moduleName = context_4 && context_4.id;
+    var __moduleName = context_7 && context_7.id;
     return {
         setters: [],
         execute: function () {
@@ -68,9 +154,9 @@ System.register("funciones/args-rest", [], function (exports_4, context_4) {
         }
     };
 });
-System.register("funciones/function-type", [], function (exports_5, context_5) {
+System.register("funciones/function-type", [], function (exports_8, context_8) {
     "use strict";
-    var __moduleName = context_5 && context_5.id;
+    var __moduleName = context_8 && context_8.id;
     return {
         setters: [],
         execute: function () {
@@ -90,9 +176,9 @@ System.register("funciones/function-type", [], function (exports_5, context_5) {
         }
     };
 });
-System.register("funciones/functions", [], function (exports_6, context_6) {
+System.register("funciones/functions", [], function (exports_9, context_9) {
     "use strict";
-    var __moduleName = context_6 && context_6.id;
+    var __moduleName = context_9 && context_9.id;
     return {
         setters: [],
         execute: function () {
@@ -112,9 +198,9 @@ System.register("funciones/functions", [], function (exports_6, context_6) {
         }
     };
 });
-System.register("objetos/objects", [], function (exports_7, context_7) {
+System.register("objetos/objects", [], function (exports_10, context_10) {
     "use strict";
-    var __moduleName = context_7 && context_7.id;
+    var __moduleName = context_10 && context_10.id;
     return {
         setters: [],
         execute: function () {
@@ -142,9 +228,9 @@ System.register("objetos/objects", [], function (exports_7, context_7) {
         }
     };
 });
-System.register("objetos/type", [], function (exports_8, context_8) {
+System.register("objetos/type", [], function (exports_11, context_11) {
     "use strict";
-    var __moduleName = context_8 && context_8.id;
+    var __moduleName = context_11 && context_11.id;
     return {
         setters: [],
         execute: function () {
@@ -178,9 +264,9 @@ System.register("objetos/type", [], function (exports_8, context_8) {
         }
     };
 });
-System.register("objetos/union-types", [], function (exports_9, context_9) {
+System.register("objetos/union-types", [], function (exports_12, context_12) {
     "use strict";
-    var __moduleName = context_9 && context_9.id;
+    var __moduleName = context_12 && context_12.id;
     return {
         setters: [],
         execute: function () {
@@ -199,9 +285,9 @@ System.register("objetos/union-types", [], function (exports_9, context_9) {
         }
     };
 });
-System.register("tipos/any", [], function (exports_10, context_10) {
+System.register("tipos/any", [], function (exports_13, context_13) {
     "use strict";
-    var __moduleName = context_10 && context_10.id;
+    var __moduleName = context_13 && context_13.id;
     return {
         setters: [],
         execute: function () {
@@ -217,9 +303,9 @@ System.register("tipos/any", [], function (exports_10, context_10) {
         }
     };
 });
-System.register("tipos/arrays", [], function (exports_11, context_11) {
+System.register("tipos/arrays", [], function (exports_14, context_14) {
     "use strict";
-    var __moduleName = context_11 && context_11.id;
+    var __moduleName = context_14 && context_14.id;
     return {
         setters: [],
         execute: function () {
@@ -236,9 +322,9 @@ System.register("tipos/arrays", [], function (exports_11, context_11) {
         }
     };
 });
-System.register("tipos/boleans", [], function (exports_12, context_12) {
+System.register("tipos/boleans", [], function (exports_15, context_15) {
     "use strict";
-    var __moduleName = context_12 && context_12.id;
+    var __moduleName = context_15 && context_15.id;
     return {
         setters: [],
         execute: function () {
@@ -253,9 +339,9 @@ System.register("tipos/boleans", [], function (exports_12, context_12) {
         }
     };
 });
-System.register("tipos/enums", [], function (exports_13, context_13) {
+System.register("tipos/enums", [], function (exports_16, context_16) {
     "use strict";
-    var __moduleName = context_13 && context_13.id;
+    var __moduleName = context_16 && context_16.id;
     return {
         setters: [],
         execute: function () {
@@ -276,9 +362,9 @@ System.register("tipos/enums", [], function (exports_13, context_13) {
         }
     };
 });
-System.register("tipos/never", [], function (exports_14, context_14) {
+System.register("tipos/never", [], function (exports_17, context_17) {
     "use strict";
-    var __moduleName = context_14 && context_14.id;
+    var __moduleName = context_17 && context_17.id;
     return {
         setters: [],
         execute: function () {
@@ -292,9 +378,9 @@ System.register("tipos/never", [], function (exports_14, context_14) {
         }
     };
 });
-System.register("tipos/null-undefined", [], function (exports_15, context_15) {
+System.register("tipos/null-undefined", [], function (exports_18, context_18) {
     "use strict";
-    var __moduleName = context_15 && context_15.id;
+    var __moduleName = context_18 && context_18.id;
     return {
         setters: [],
         execute: function () {
@@ -314,9 +400,9 @@ System.register("tipos/null-undefined", [], function (exports_15, context_15) {
         }
     };
 });
-System.register("tipos/numbers", [], function (exports_16, context_16) {
+System.register("tipos/numbers", [], function (exports_19, context_19) {
     "use strict";
-    var __moduleName = context_16 && context_16.id;
+    var __moduleName = context_19 && context_19.id;
     return {
         setters: [],
         execute: function () {
@@ -336,9 +422,9 @@ System.register("tipos/numbers", [], function (exports_16, context_16) {
         }
     };
 });
-System.register("tipos/strings", [], function (exports_17, context_17) {
+System.register("tipos/strings", [], function (exports_20, context_20) {
     "use strict";
-    var __moduleName = context_17 && context_17.id;
+    var __moduleName = context_20 && context_20.id;
     return {
         setters: [],
         execute: function () {
@@ -369,9 +455,9 @@ System.register("tipos/strings", [], function (exports_17, context_17) {
         }
     };
 });
-System.register("tipos/tuples", [], function (exports_18, context_18) {
+System.register("tipos/tuples", [], function (exports_21, context_21) {
     "use strict";
-    var __moduleName = context_18 && context_18.id;
+    var __moduleName = context_21 && context_21.id;
     return {
         setters: [],
         execute: function () {
@@ -383,9 +469,9 @@ System.register("tipos/tuples", [], function (exports_18, context_18) {
         }
     };
 });
-System.register("tipos/void", [], function (exports_19, context_19) {
+System.register("tipos/void", [], function (exports_22, context_22) {
     "use strict";
-    var __moduleName = context_19 && context_19.id;
+    var __moduleName = context_22 && context_22.id;
     return {
         setters: [],
         execute: function () {

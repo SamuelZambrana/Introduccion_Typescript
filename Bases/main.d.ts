@@ -1,4 +1,6 @@
-declare module "app" { }
+declare module "ES6/desestructuring" { }
+declare module "ES6/for-of" { }
+declare module "ES6/let-var" { }
 declare module "funciones/args-default" { }
 declare module "funciones/args-optionals" { }
 declare module "funciones/args-required" { }
