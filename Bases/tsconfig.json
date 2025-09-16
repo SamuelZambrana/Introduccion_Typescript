@@ -41,5 +41,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  "include": ["ES6", "funciones", "objetos", "tipos"],
+  "include": ["classes"],
+  "exclude": ["node_modules", "**/node_modules/*"]
 }

@@ -1,23 +1,2 @@
-declare module "ES6/desestructuring" { }
-declare module "ES6/for-of" { }
-declare module "ES6/let-var" { }
-declare module "funciones/args-default" { }
-declare module "funciones/args-optionals" { }
-declare module "funciones/args-required" { }
-declare module "funciones/args-rest" { }
-declare module "funciones/function-type" { }
-declare module "funciones/functions" { }
-declare module "objetos/objects" { }
-declare module "objetos/type" { }
-declare module "objetos/union-types" { }
-declare module "tipos/any" { }
-declare module "tipos/arrays" { }
-declare module "tipos/boleans" { }
-declare module "tipos/enums" { }
-declare module "tipos/never" { }
-declare module "tipos/null-undefined" { }
-declare module "tipos/numbers" { }
-declare module "tipos/strings" { }
-declare module "tipos/tuples" { }
-declare module "tipos/void" { }
+declare module "basica" { }
 //# sourceMappingURL=main.d.ts.map
