@@ -41,6 +41,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  "include": ["interfaces"],
+  "include": ["namespaces"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }

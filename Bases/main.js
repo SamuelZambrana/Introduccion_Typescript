@@ -1,81 +1,31 @@
-System.register("basicas", [], function (exports_1, context_1) {
+System.register("validations", [], function (exports_1, context_1) {
     "use strict";
+    var Validations;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [],
         execute: function () {
-            (() => {
-                // Bases/interfaces/basicas.ts
-                const superheroe = {
-                    nombre: "Dr. Strange",
-                    artesMarciales: ["Karate", "Aikido", "Wing Chun", "Jiu-Jitsu"]
-                };
-                const { nombre, artesMarciales } = superheroe;
-                console.log(nombre);
-                console.log(artesMarciales.join(", "));
-            })();
-        }
-    };
-});
-System.register("clases", [], function (exports_2, context_2) {
-    "use strict";
-    var __moduleName = context_2 && context_2.id;
-    return {
-        setters: [],
-        execute: function () {
-            (() => {
-                class Mutant {
-                    nombre;
-                    realName;
-                    constructor(nombre, realName) {
-                        this.nombre = nombre;
-                        this.realName = realName;
-                    }
-                    mutandPower(id) {
-                        return this.nombre + ' ' + id;
-                    }
+            (function (Validations) {
+                /**
+                 * Validates if the input is a non-empty string.
+                 * @param input - The string to validate.
+                 * @returns True if the input is a non-empty string, otherwise false.
+                 */
+                function isNonEmptyString(input) {
+                    return typeof input === 'string' && input.trim().length > 0;
                 }
-                const wolverine = new Mutant('Wolverine', 'Logan');
-                const charles = new Mutant('Profesor X', 'Charles Xavier');
-                console.log(wolverine.mutandPower(1));
-                console.log(charles.mutandPower(2));
-            });
-        }
-    };
-});
-System.register("complejas", [], function (exports_3, context_3) {
-    "use strict";
-    var __moduleName = context_3 && context_3.id;
-    return {
-        setters: [],
-        execute: function () {
-            (() => {
-                const client = {
-                    name: 'Alejandro',
-                    age: 23,
-                    address: {
-                        id: 123456,
-                        zip: '12345',
-                        city: 'New York'
-                    },
-                    getFullAddress(id) {
-                        return this.address?.city || '';
-                    }
-                };
-            });
-        }
-    };
-});
-System.register("funciones", [], function (exports_4, context_4) {
-    "use strict";
-    var __moduleName = context_4 && context_4.id;
-    return {
-        setters: [],
-        execute: function () {
-            (() => {
-                const addNumbers = (a, b) => a + b;
-                console.log(addNumbers(1, 2));
-            });
+                Validations.isNonEmptyString = isNonEmptyString;
+                /**
+                 * Validates if the input is a valid email address.
+                 * @param email - The email address to validate.
+                 * @returns True if the email is valid, otherwise false.
+                 */
+                function isValidEmail(email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+                Validations.isValidEmail = isValidEmail;
+            })(Validations || (Validations = {}));
         }
     };
 });

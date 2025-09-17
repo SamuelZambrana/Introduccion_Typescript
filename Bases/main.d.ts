@@ -1,5 +1,2 @@
-declare module "basicas" { }
-declare module "clases" { }
-declare module "complejas" { }
-declare module "funciones" { }
+declare module "validations" { }
 //# sourceMappingURL=main.d.ts.map
